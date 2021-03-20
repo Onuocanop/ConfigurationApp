@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CDC driver -->
+    <usb-device vendor-id="2341" />                   <!-- 0x2341 / ......: Arduino -->
+</resources>

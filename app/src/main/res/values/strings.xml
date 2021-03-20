@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ConfigurationApp</string>
+    <string name="btn1">Connect</string>
+    <string name="btn2">Disconnect</string>
+    <string name="swc">Led</string>
+
+
+
+
+</resources>
