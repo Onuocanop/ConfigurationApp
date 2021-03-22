@@ -17,20 +17,24 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.felhr.usbserial.UsbSerialDevice;
-import com.felhr.usbserial.UsbSerialInterface;
+import com.felhr.usbserial.UsbSerialDevice;  // Initilisation de la bibliothèque de felhr (appareil)
+import com.felhr.usbserial.UsbSerialInterface; // Initialisation de la bibliothèque de felhr (interface)
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
+/** La MainActivity sert à créer une connection entre une arduino et un appareil android grâce à l'utilisation de la bibliothèque de felHR
+*@author Kadioglu & Cheng
+*@version 1.0
+*/
 
 public class MainActivity extends AppCompatActivity {
 
-    public final String ACTION_USB_PERMISSION = "com.hariharan.arduinousb.USB_PERMISSION";
+    public final String ACTION_USB_PERMISSION = "com.hariharan.arduinousb.USB_PERMISSION"; // Commande permettant de demander la permission deconnection à l'appareil android lors du brachement
 
-    UsbDevice device;
-    UsbManager usbManager;
-    UsbSerialDevice serialPort;
+    UsbDevice device; // Initialisation de l'appareil
+    UsbManager usbManager; // Initialisation du management de l'USB
+    UsbSerialDevice serialPort; // Initialisation de la connexion 
     UsbDeviceConnection connection;
     Button CntBtn, DcntBtn;
     Switch Sw;
