@@ -221,56 +221,56 @@
 
         // Fonction qui de permet voir si la tete incline vers la droite
         public void onClickHeadRight(View view) {
-            String string = "H+0050";
+            String string = "H+6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui de permet voir si la tete incline vers la gauche
         public void onClickHeadLeft(View view) {
-            String string = "H-0050";
+            String string = "H-6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui de permet voir si la tete incline vers le haut
         public void onClickHeadUp(View view) {
-            String string = "V+0050";
+            String string = "V+6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui de permet voir si la tete incline vers le bas
         public void onClickHeadDown(View view) {
-            String string = "V-0050";
+            String string = "V-6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui permet de voir si la main gauche descend
         public void onClickLeftHandDown(View view) {
-            String string = "B-0050";
+            String string = "B-6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui permet de voir si la main gauche monte
         public void onClickLeftHandUp(View view) {
-            String string = "B+0050";
+            String string = "B+6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui permet de voir si la main droite descend
         public void onClickRightHandDown(View view) {
-            String string = "K-0050";
+            String string = "K-6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
 
         // Fonction qui permer de voir si la main droite monte
         public void onClickRightHandUp(View view) {
-            String string = "K+0050";
+            String string = "K+6400";
             serialPort.write(string.getBytes()); // envoie une imformation à l'arduino
             tvAppend(textView, "\nData Sent : " + string + "\n"); //Affiche l'information envoyé sur le textview dans l'affichage graphique
         }
