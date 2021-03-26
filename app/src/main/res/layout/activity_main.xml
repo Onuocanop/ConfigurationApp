@@ -1,46 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <Switch
-        android:id="@+id/switch2"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp" tools:context=".MainActivity">
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="292dp"
-        android:text="@string/swc"
-        android:onClick="onClickedSwitch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="137dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/btn1"
-        android:onClick="onCLickConnect"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.519"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Begin"
+        android:id="@+id/buttonStart"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickStart"/>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="143dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="232dp"
-        android:layout_marginRight="232dp"
-        android:layout_marginBottom="44dp"
-        android:text="@string/btn2"
-        android:onClick="onClickDisconnect"
-        app:layout_constraintBottom_toTopOf="@+id/switch2"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/buttonSend"
+        android:onClick="onClickSend"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/buttonStart"
+        android:layout_toEndOf="@+id/buttonStart" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="1814dp"
+        android:layout_height="1188dp"
+        android:layout_below="@+id/buttonSend"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="58dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/buttonStop"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/buttonSend"
+        android:layout_toEndOf="@+id/buttonSend"
+        android:onClick="onClickStop"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/buttonClear"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/buttonStop"
+        android:layout_toEndOf="@+id/buttonStop"
+        android:onClick="onClickClear"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motor"
+        android:id="@+id/buttonMotor"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/buttonClear"
+        android:layout_toEndOf="@+id/buttonClear"
+        android:onClick="onClickMotor"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tete +H"
+        android:id="@+id/buttonHeadPH"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/buttonMotor"
+        android:layout_toEndOf="@+id/buttonMotor"
+        android:onClick="onClickHeadRight"/>
+
+    <Button
+        android:id="@+id/buttonHeadMH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonHeadPH"
+        android:layout_toRightOf="@+id/buttonHeadPH"
+        android:onClick="onClickHeadLeft"
+        android:text="Tete -H" />
+
+    <Button
+        android:id="@+id/buttonHeadPV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonHeadMH"
+        android:layout_toRightOf="@+id/buttonHeadMH"
+        android:onClick="onClickHeadUp"
+        android:text="Tete +V" />
+
+    <Button
+        android:id="@+id/buttonHeadMV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonHeadPV"
+        android:layout_toRightOf="@+id/buttonHeadPV"
+        android:onClick="onClickHeadDown"
+        android:text="Tete -V" />
+
+    <Button
+        android:id="@+id/buttonBrasMG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonHeadMV"
+        android:layout_toRightOf="@+id/buttonHeadMV"
+        android:onClick="onClickLeftHandDown"
+        android:text="Bras -G" />
+
+    <Button
+        android:id="@+id/buttonBrasPG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toEndOf="@+id/buttonBrasMG"
+        android:layout_toRightOf="@+id/buttonBrasMG"
+        android:onClick="onClickLeftHandUp"
+        android:text="Bras +G" />
 
 
+    <Button
+        android:id="@+id/buttonBrasMD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_below="@+id/buttonClear"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/buttonYeux"
+        android:layout_toRightOf="@+id/buttonYeux"
+        android:onClick="onClickRightHandDown"
+        android:text="Bras -D" />
+
+    <Button
+        android:id="@+id/buttonBrasPD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+
+        android:layout_marginTop="53dp"
+        android:onClick="onClickRightHandUp"
+        android:text="Bras +D" />
+
+    <Button
+        android:id="@+id/buttonYeux"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/buttonSend"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/buttonBrasPD"
+        android:layout_toRightOf="@+id/buttonBrasPD"
+        android:onClick="onClickEyes"
+        android:text="Les Yeux" />
+
+
+</RelativeLayout>
