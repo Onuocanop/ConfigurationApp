@@ -49,10 +49,6 @@
                     data = new String(arg0, "UTF-8");
                     data.concat("/n");
                     tvAppend(textView, data);
-                    if(data == "Led")
-                    {
-
-                    }
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
