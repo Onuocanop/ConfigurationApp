@@ -68,11 +68,7 @@ proxy:
   # '/test':
   #   target: 'https://example.com'
   #   changeOrigin: true
-  '/gitlabci':
-    target: 'https://gitlab.com/api/v4'
-    allowedMethods: ['GET']
-    headers:
-      PRIVATE-TOKEN: 'glpat-wZKCE4nRRZVTxPGUC1tj'
+
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
 # and an external cloud storage when deploying TechDocs for production use-case.
